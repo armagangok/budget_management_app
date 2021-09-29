@@ -1,4 +1,4 @@
-name: budget_management_app
+name: test_budget_management
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -34,6 +34,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  hive: ^2.0.4
+  path_provider: ^2.0.5
+  hive_flutter: ^1.1.0
+  build_runner: ^2.1.2
+  hive_generator: ^1.1.1
+  shared_preferences: ^2.0.8
+  provider: ^6.0.1
+
+
 
 dev_dependencies:
   flutter_test:
