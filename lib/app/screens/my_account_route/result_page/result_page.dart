@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:test_budget_management/database/hive.dart';
-import '../../../core/appbar/appbar.dart';
-import '../../../core/text_widget/text_widget.dart';
+import '../../../components/appbar/appbar.dart';
+import '../../../components/text_widget/text_widget.dart';
 
 class ResultPage extends StatelessWidget {
   final _data = returnData();
@@ -10,7 +10,7 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("MALİ DURUM"),
+      appBar:const AppBarWidget(text: "MALİ DURUM",),
       body: FutureBuilder(
         future: _data,
         builder: (BuildContext context, AsyncSnapshot snapshot) {

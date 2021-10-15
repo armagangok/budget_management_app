@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProviderHelper with ChangeNotifier {
-  final prizeControllerIn = TextEditingController();
-  final placeControllerIn = TextEditingController();
-  final prizeControllerOut = TextEditingController();
-  final placeControllerOut = TextEditingController();
+  late final double prizeControllerIn;
+  late final double placeControllerIn;
+  late final double prizeControllerOut;
+  late final double placeControllerOut;
 }

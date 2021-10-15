@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'incoming_route/incoming.dart';
 import 'outgoing_route.dart/outgoing.dart';
-import '../../core/appbar/appbar.dart';
+import '../../components/appbar/appbar.dart';
 
-class IncomingOutoingRoute extends StatelessWidget {
+class IncomingOutoingPage extends StatelessWidget {
   final dynamic data;
-  const IncomingOutoingRoute({Key? key, this.data}) : super(key: key);
+  const IncomingOutoingPage({Key? key, this.data}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber[200],
-      appBar: appBar("Gelir Gider Ekle"),
+      appBar: const AppBarWidget(text: "Gelir gider ekle",),
       body: body(context, data.placeControllerIn, data.placeControllerOut,
           data.prizeControllerIn, data.prizeControllerOut),
     );

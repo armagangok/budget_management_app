@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:test_budget_management/Database/hive.dart';
-import '../../../core/text_widget/text_widget.dart';
+import '../../../components/text_widget/text_widget.dart';
 
-Widget earnedAmountWidget(earnedAmount) {
+Widget outgoingSource(loanAmount) {
   return TextFormField(
-    controller: earnedAmount,
+    controller: loanAmount,
     decoration: InputDecoration(
-      hintText: 'Gelir miktarını yaz..',
-      labelText: 'Son gelirin miktarını ekle.',
+      hintText: 'Gider miktarı ..',
+      labelText: 'Son giderin miktarını ekle.',
       labelStyle: const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -21,12 +21,12 @@ Widget earnedAmountWidget(earnedAmount) {
   );
 }
 
-Widget earnedSourceWidget(earnedName) {
+Widget outgoingAmount(loanName) {
   return TextFormField(
-    controller: earnedName,
+    controller: loanName,
     decoration: InputDecoration(
-      hintText: 'Gelir kaynağını yaz..',
-      labelText: 'Son gelir kaynağının adını ekle.',
+      hintText: 'Gider kaynağı ..',
+      labelText: 'Son gider kaynağının adını ekle.',
       labelStyle: const TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.bold,
@@ -40,11 +40,11 @@ Widget earnedSourceWidget(earnedName) {
   );
 }
 
-Widget saveEarnedButton(earnedName, earnedAmount) {
+Widget saveLoanButton(loanAmount, loanName) {
   return ButtonTheme(
     child: ElevatedButton(
-      onPressed: () {
-        saveEarned(earnedName, earnedAmount);
+      onPressed: () async {
+        saveLoan(loanName, loanAmount);
       },
       child: text("KAYDET"),
     ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/appbar/appbar.dart';
+import '../../../components/appbar/appbar.dart';
 import '../loan_page/widgets/widgets.dart';
 
 class LoanPage extends StatelessWidget {
@@ -7,9 +7,9 @@ class LoanPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar("GİDERLER"),
-      body: const LoanPageWidget(),
+    return const Scaffold(
+      appBar: AppBarWidget(text: "GİDERLER"),
+      body:  LoanPageWidget(),
     );
   }
 }
